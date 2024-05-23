@@ -13,12 +13,19 @@ class student
    rno=a;
    per=b;
  }
- void displaystudent()
+ void displaystudentresult()
  {
-   cout<<"student information........"<<endl;
+   cout<<"student result....."<<endl;
    cout<<"student name = "<<name<<endl;
    cout<<"student rno = "<<rno<<endl;
    cout<<"student per = "<<per<<endl;
+   if(per>33)
+   {
+    cout<<"student : pass "<<endl;
+   }
+   else{
+    cout<<"student : fail "<<endl;
+   }
    cout<<"_________________________________"<<endl;
  }
  
@@ -29,8 +36,8 @@ int main()
  s1.setstudentdata("megha",1001,89.67);
  s2.setstudentdata("muskan",1002,99.67);
  s3.setstudentdata("kirtee",1003,13.67);
- s2.displaystudent();
- s1.displaystudent();
- s3.displaystudent();
+ s2.displaystudentresult();
+ s1.displaystudentresult();
+ s3.displaystudentresult();
     return 0;
 }
