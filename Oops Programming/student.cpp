@@ -50,6 +50,26 @@ class student
  static void classinfo()
  {
   cout<<"provide info about methods"<<endl;
+   cout<<"_________________________________________"<<endl;
+
+ }
+ static void avarage(student obj1,student obj2)
+ {
+  float avg=(obj1.per+obj2.per)/2.0;
+  cout<<"avrage percentage of "<<obj1.name<<" and "<<obj2.name<<" = "<<avg<<endl;
+  cout<<"_________________________________________"<<endl;
+ }
+ static void avarage(student obj1,student obj2,student obj3)
+ {
+  float avg=(obj1.per+obj2.per+obj3.per)/3.0;
+  cout<<"avrage percentage of "<<obj1.name<<" and "<<obj2.name<<" and "<<obj3.name<<" = "<<avg<<endl;
+  cout<<"_________________________________________"<<endl;
+ }
+  static void avarage(student obj1,student obj2,student obj3,student obj4)
+ {
+  float avg=(obj1.per+obj2.per+obj3.per+obj4.per)/4.0;
+  cout<<"avrage percentage of "<<obj1.name<<" and "<<obj2.name<<" and "<<obj3.name<<" and "<<obj4.name<<" = "<<avg<<endl;
+  cout<<"_________________________________________"<<endl;
  }
 };
 int student::totalpass=0;
@@ -57,15 +77,23 @@ int student::totalfail=0;
 int student::totalstd=0;
 int main()
 {
- student s1,s2,s3;
+ student s1,s2,s3,s4;
  s1.setstudentdata("megha",1001,89.67);
  s2.setstudentdata("muskan",1002,12.67);
  s3.setstudentdata("kirtee",1003,13.67);
+ s4.setstudentdata("bhupendra",1004,10.78);
  s1.displaystudentresult();
  s2.displaystudentresult();
  s3.displaystudentresult();
+ s4.displaystudentresult();
  student::displaytotalresult();
  student::displaytotalstd();
  student::classinfo();
+ student::avarage(s1,s2);
+ student::avarage(s1,s3);
+ student::avarage(s2,s3);
+ student::avarage(s1,s2,s3);
+ student::avarage(s1,s2,s4);
+ student::avarage(s1,s2,s3,s4);
     return 0;
 }

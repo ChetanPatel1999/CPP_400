@@ -23,13 +23,16 @@ void emp::setdata()// (::)scope resolution operator
     }
 int main()
 {
- emp e[5];
+   int n;
+   cout<<"enter emp number : ";
+   cin>>n;
+   emp e[n];
  int i;
- for(i=0;i<5;i++)
+ for(i=0;i<n;i++)
  {
     e[i].setdata();
  }
- for(i=0;i<5;i++)
+ for(i=0;i<n;i++)
  {
     e[i].display();
  }
