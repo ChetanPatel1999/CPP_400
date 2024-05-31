@@ -5,7 +5,7 @@ class complex
     int real;
     int image;
     public:
-    void setdata(int a,int b)
+    complex(int a,int b)
     {
         real=a;
         image=b;
@@ -23,9 +23,7 @@ class complex
 };
 int main()
 {
-    complex c1,c2;
-    c1.setdata(12,6);
-    c2.setdata(8,7);
+    complex c1(12,6),c2(8,7);
     c1.display();
     c2.display();
     c1.sum(c2);
