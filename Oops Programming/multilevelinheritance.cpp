@@ -15,6 +15,7 @@ class student
 };
 class marks:public student
 {
+    protected:
     int hindi;
     int math;
     public:
@@ -43,7 +44,7 @@ class result:public marks
     public:
     void displayresult()
     {
-        float per=((gethindi()+getmath())/200.0)*100;
+        float per=((hindi+math)/200.0)*100;
         displaymarks();
         cout<<"percentage : "<<per<<endl;
         cout<<"__________________________"<<endl;;
