@@ -2,6 +2,7 @@
 using namespace std;
 class student
 {
+    private:
     int rno;
     public:
     void setrno(int a)
